@@ -8,6 +8,14 @@ Compliments Results
 
 <!-- Your HTML code goes here! -->
 
-
-
+<h2>Hi there {{users_name}}!</h2>
+{% if wants_compliments == 'yes' %}
+    <ul>
+        {% for compliment in random_compliment %}
+            <li> You are {{ compliment }} </li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>I guess I'll keep this loving for myself!</p>
+{% endif %}
 {% endblock %}
